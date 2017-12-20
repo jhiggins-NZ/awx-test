@@ -21,7 +21,7 @@
           commands:
             - " configure replace nvram:startup-config force"
             - clear archive log config force
-        timeout: 60
+          timeout: 60
       - name: Show run
         ios_command:
           commands:
