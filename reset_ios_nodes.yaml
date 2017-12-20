@@ -26,6 +26,6 @@
         ios_command:
           commands:
             - "show run"
-          register: output
           timeout: 60
+        register: output
       - debug: msg="{{ output.stdout_lines }}"
