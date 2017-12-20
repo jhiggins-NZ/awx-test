@@ -22,3 +22,10 @@
             - " configure replace nvram:startup-config force"
             - clear archive log config force
           timeout: 60
+      - name: Show run
+        ios_command:
+          commands:
+            - show run
+          register: output
+          timeout: 60
+      - debug: msg="{{ output.stdout_lines }}"
